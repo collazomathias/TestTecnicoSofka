@@ -163,8 +163,8 @@ class Main:
 
         self.bSelectCat = Button(self.frGame, text='Elegir categoría', width=16, height=2, bg='green', fg='white',
                                  activebackground='darkgreen', activeforeground='white',
-                                 command=lambda: self.elegirPregunta())
-        self.bSelectQuest = Button(self.frGame, text='Elegir pregunta', width=16, height=2, bg='green', fg='white',
+                                 command=lambda: self.elegirRespuesta())
+        self.bSelectQuest = Button(self.frGame, text='Elegir respuesta', width=16, height=2, bg='green', fg='white',
                                 activebackground='darkgreen', activeforeground='white',
                                 command=lambda: self.elegirCategoria())
 
@@ -312,7 +312,7 @@ class Main:
         if self.gameStarted != 1:
             self.gameStarted = 1
 
-    def elegirPregunta(self):
+    def elegirRespuesta(self):
         self.labCatSelect.place_forget()
         self.cbCatGame.place_forget()
         curQuest = controller.obtenerPreguntaCat(self.cbCatGame.get())
