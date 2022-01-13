@@ -152,7 +152,7 @@ class Main:
         self.labCatSelect.configure(font=fontTitleMin)
         self.cbCatGame = ttk.Combobox(self.frGame, width=39)
 
-        self.labQuest = Label(self.frGame, bg='blanchedalmond', height=2)
+        self.labQuest = Label(self.frGame, bg='blanchedalmond', height=2, wraplength=350)
         self.labQuest.configure(font=fontTitle)
         self.labQuestSelect = Label(self.frGame, text='Selecciona una respuesta:', height=2, width=25)
         self.labQuestSelect.configure(font=fontTitleMin)
@@ -306,7 +306,7 @@ class Main:
         self.cbQuestGame.place_forget()
         self.frGame.place(x=0, y=0)
         self.labCatSelect.place(relx=0.35, y=40, anchor=CENTER)
-        self.cbCatGame.place(relx=0.35, y=90, anchor=CENTER)
+        self.cbCatGame.place(relx=0.35, y=65, anchor=CENTER)
         self.bSelectCat.place(x=392, y=15)
         self.bSelectQuest.place_forget()
         if self.gameStarted != 1:
